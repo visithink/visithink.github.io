@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <title>ETL</title>
+  <meta name="description" content="你发现了个神奇的网站~">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="追梦抓梦的blog">
+  <meta itemprop="description" content="你发现了个神奇的网站~">
+  <meta itemprop="image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://l.bbel.ink">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="追梦抓梦的blog">
+  <meta property="og:description" content="你发现了个神奇的网站~">
+  <meta property="og:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="追梦抓梦的blog">
+  <meta name="twitter:description" content="你发现了个神奇的网站~">
+  <meta name="twitter:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <meta name="description" content="哎哟你发现了个神奇的网站~">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="追梦抓梦">
+  <meta itemprop="description" content="哎哟你发现了个神奇的网站~">
+  <meta itemprop="image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://l.bbel.ink">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="追梦抓梦">
+  <meta property="og:description" content="哎哟你发现了个神奇的网站~">
+  <meta property="og:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="追梦抓梦">
+  <meta name="twitter:description" content="哎哟你发现了个神奇的网站~">
+  <meta name="twitter:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+
+
+  <!-- Meta Tags Generated via http://heymeta.com -->
+
+  <meta name="description" content="ETLETL，是英文 Extract-Transform-Load 的缩写，用来描述将数据从来源端经过抽取(extract)、转换(transform)、加载(load)至目的端的过程。ETL一词较常用在数据仓库，但其对象并不限于数据仓库。">
+  <meta name="author" content="robotkang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ETL">
+  <meta name="twitter:description" content="ETLETL，是英文 Extract-Transform-Load 的缩写，用来描述将数据从来源端经过抽取(extract)、转换(transform)、加载(load)至目的端的过程。ETL一词较常用在数据仓库，但其对象并不限于数据仓库。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ETL">
+  <meta property="og:description" content="ETLETL，是英文 Extract-Transform-Load 的缩写，用来描述将数据从来源端经过抽取(extract)、转换(transform)、加载(load)至目的端的过程。ETL一词较常用在数据仓库，但其对象并不限于数据仓库。">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://bbel.ink/2019/02/ETL/">
+  <link rel="alternate" type="application/rss+xml" title="追梦抓梦" href="https://bbel.ink/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=2854006074878156134' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?add624666edd5826791ede28584a5f81";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'GTM-WQCZ8XP', '');
+      ga('send', 'pageview');
+  </script>
+  
+
+<!-- Valine Comment -->
+    
+</head>
+
+  <body style="height:1000px;">
+   <meta name="baidu-site-verification" content="0L5MKMrHOb" />
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  
+                博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/liuyan" title="liuyan" class="btn-mobile-menu__icon">
+                      留言
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+<!--<style type="text/css">-->
+<!--body {background-image:url(http://pjz6rekh4.bkt.clouddn.com/fullsizeoutput_80.jpeg)}-->
+<!--p.flower {background-image: url(http://pjz6rekh4.bkt.clouddn.com/fullsizeoutput_80.jpeg); padding: 20px;}-->
+<!--</style>-->
+  
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 追梦抓梦 的主页" class="blog-button">
+                <div class="img"><img src=http://qiniu.nineying.cn/IMG_0007.gif alt="gif"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h1> 
+                            
+                                追梦抓梦
+                            
+                        </h1>
+                        <p>
+                           
+                                Never give up!  你的每一项专长都能为幸福铺路。
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 追梦抓梦" class="blog-button">追梦抓梦</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">男人炫耀的资本不是你现在有多少钱，有多大的权利。而是你经历了什么，越过了多大的坎，跳过了多深的坑照样一身傲气，最后完成了自己的梦想成家立业 。到那时你即使身无分文，出门人家也瞧得起你。人家可能会说，那个男孩当年是个搬砖的，现在一步一步爬成了一个大老板。而你开着保时捷跑在马路上横冲直撞，人家只会说这孩子当初穷的时候不坚持梦想，把自己的礼节、知识全搞丢了，走了错路。虽然有了钱，但也一无所有。</span>
+        
+        <hr class="panel-cover__divider" style="height:1px;border:none;border-top:1px solid #555555;"/>
+        <p class="panel-cover__description"></p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" style="height:1px;border:none;border-top:1px solid #555555;"/>
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/liuyan" title="liuyan">留言</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-disabled"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- latex公式支持代码 end -->
+
+<!-- 代码高亮设置 begin  代码高亮设置 end -->
+<link rel="stylesheet" href="/css/pygments-default.css">
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">ETL</h1>
+    <div class="post-meta" style="color:#C3C3C3;border-bottom-width: 1px;border-bottom-style: dashed;padding-bottom: 0px;padding-top: 5px;">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-02-05 09:30:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-02-05</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span></span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="etl">ETL</h3>
+<p>ETL，是英文 Extract-Transform-Load 的缩写，用来描述将数据从来源端经过抽取(extract)、转换
+(transform)、加载(load)至目的端的过程。ETL一词较常用在数据仓库，但其对象并不限于数据仓库。</p>
+
+<p>ETL是构建数据仓库的重要一环，用户从数据源抽取出所需的数据，经过数据清洗,最终按照预先定义好的数据仓库模型，将数据加载到数据仓库中去。</p>
+
+<p>信息是现代企业的重要资源，是企业运用科学管理、决策分析的基础。目前，大多数企业花费大量的资金和时间来构建联机事务处理OLTP的业务系统和办公自动化系统，用来记录事务处理的各种相关数据。据统计，数据量每2~3年时间就会成倍增长，这些数据蕴含着巨大的商业价值，而企业所关注的通常只占在总数据量的2%~4%左右。因此，企业仍然没有最大化地利用已存在的数据资源，以致于浪费了更多的时间和资金，也失去制定关键商业决策的最佳契机。于是，企业如何通过各种技术手段，并把数据转换为信息、知识，已经成了提高其核心竞争力的主要瓶颈。而ETL则是主要的一个技术手段。</p>
+
+<h4 id="section">主要特点</h4>
+<ul>
+  <li>
+    <p>ETL负责将分布的、异构数据源中的数据如关系数据、平面数据文件等抽取到临时中间层后进行清洗、转换、集成，最后加载到数据仓库或数据集市中，成为联机分析处理、数据挖掘的基础。</p>
+  </li>
+  <li>
+    <p>ETL一词较常出现在数据仓库，但其对象并不局限于数据仓库。</p>
+  </li>
+  <li>
+    <p>ETL是数据仓库中的非常重要的一环。它是承前启后的必要的一步。相对于关系数据库，数据仓库技术没有严格的数学理论基础，它更面向实际工程应用。所以从工程应用的角度来考虑，按着物理数据模型的要求加载数据并对数据进行一些系列处理，处理过程与经验直接相关，同时这部分的工作直接关系数据仓库中数据的质量，从而影响到联机分析处理和数据挖掘的结果的质量。</p>
+  </li>
+  <li>
+    <p>数据仓库是一个独立的数据环境，需要通过抽取过程将数据从联机事务处理环境、外部数据源和脱机的数据存储介质导入到数据仓库中；在技术上，ETL主要涉及到关联、转换、增量、调度和监控等几个方面；数据仓库系统中数据不要求与联机事务处理系统中数据实时同步，所以ETL可以定时进行。但多个ETL的操作时间、顺序和成败对数据仓库中信息的有效性至关重要。</p>
+  </li>
+</ul>
+
+<p>ETL过程在很大程度上受企业对源数据的理解程度的影响，也就是说从业务的角度看数据集成非常重要。一个优秀的ETL设计应该具有如下功能：</p>
+
+<h5 id="section-1">1、管理简单</h5>
+<p>采用元数据方法，集中进行管理；接口、数据格式、传输有严格的规范；尽量不在外部数据源安装软件；数据抽取系统流程自动化，并有自动调度功能；抽取的数据及时、准确、完整；可以提供同各种数据系统的接口，系统适应性强；提供软件框架系统，系统功能改变时，应用程序很少改变便可适应变化；可扩展性强。</p>
+
+<h5 id="section-2">2、标准定义数据</h5>
+<p>合理的业务模型设计对ETL至关重要。数据仓库是企业唯一、真实、可靠的综合数据平台。数据仓库的设计建模一般都依照三范式、星型模型、雪花模型，无论哪种设计思想，都应该最大化地涵盖关键业务数据，把运营环境中杂乱无序的数据结构统一成为合理的、关联的、分析型的新结构，而ETL则会依照模型的定义去提取数据源，进行转换、清洗，并最终加载到目标数据仓库中。</p>
+
+<p>模型的重要之处在于对数据做标准化定义，实现统一的编码、统一的分类和组织。标准化定义的内容包括：标准代码统一、业务术语统一。ETL依照模型进行初始加载、增量加载、缓慢增长维、慢速变化维、事实表加载等数据集成，并根据业务需求制定相应的加载策略、刷新策略、汇总策略、维护策略。</p>
+
+<h5 id="section-3">3、拓展新型应用</h5>
+<p>对业务数据本身及其运行环境的描述与定义的数据，称之为元数据（metadata）。元数据是描述数据的数据。从某种意义上说，业务数据主要用于支持业务系统应用的数据，而元数据则是企业信息门户、客户关系管理、数据仓库、决策支持和B2B等新型应用所不可或缺的内容。</p>
+
+<p>元数据的典型表现为对象的描述，即对数据库、表、列、列属性（类型、格式、约束等）以及主键/外部键关联等等的描述。特别是现行应用的异构性与分布性越来越普遍的情况下，统一的元数据就愈发重要了。“信息孤岛”曾经是很多企业对其应用现状的一种抱怨和概括，而合理的元数据则会有效地描绘出信息的关联性。</p>
+
+<p>而元数据对于ETL的集中表现为：定义数据源的位置及数据源的属性、确定从源数据到目标数据的对应规则、确定相关的业务逻辑、在数据实际加载前的其他必要的准备工作，等等，它一般贯穿整个数据仓库项目，而ETL的所有过程必须最大化地参照元数据，这样才能快速实现ETL。</p>
+
+<h4 id="section-4">其他资料</h4>
+
+<p>ETL(Extract-Transform-Load的缩写，即数据抽取、转换、装载的过程)作为BI/DW（Business Intelligence）的核心和灵魂，能够按照统一的规则集成并提高数据的价值，是负责完成数据从数据源向目标数据仓库转化的过程，是实施数据仓库的重要步骤。如果说数据仓库的模型设计是一座大厦的设计蓝图，数据是砖瓦的话，那么ETL就是建设大厦的过程。在整个项目中最难部分是用户需求分析和模型设计，而ETL规则设计和实施则是工作量最大的，约占整个项目的60%～80%，这是国内外从众多实践中得到的普遍共识。</p>
+
+<p>ETL是数据抽取（Extract）、清洗（Cleaning）、转换（Transform）、装载（Load）的过程。是构建数据仓库的重要一环，用户从数据源抽取出所需的数据，经过数据清洗,最终按照预先定义好的数据仓库模型，将数据加载到数据仓库中去。</p>
+
+<p>信息是现代企业的重要资源，是企业运用科学管理、决策分析的基础。目前，大多数企业花费大量的资金和时间来构建联机事务处理OLTP的业务系统和办公自动化系统，用来记录事务处理的各种相关数据。据统计，数据量每2～3年时间就会成倍增长，这些数据蕴含着巨大的商业价值，而企业所关注的通常只占在总数据量的2%～4%左右。因此，企业仍然没有最大化地利用已存在的数据资源，以致于浪费了更多的时间和资金，也失去制定关键商业决策的最佳契机。于是，企业如何通过各种技术手段，并把数据转换为信息、知识，已经成了提高其核心竞争力的主要瓶颈。而ETL则是主要的一个技术手段。</p>
+
+<h4 id="etl-1">ETL工具应用</h4>
+<p>目前，ETL工具的典型代表有:Informatica、Datastage、OWB、微软DTS、Beeload、Kettle……</p>
+
+<p>开源的工具有eclipse的etl插件。cloveretl.</p>
+
+<p>数据集成：快速实现ETL</p>
+
+<p>ETL的质量问题具体表现为正确性、完整性、一致性、完备性、有效性、时效性和可获取性等几个特性。而影响质量问题的原因有很多，由系统集成和历史数据造成的原因主要包括:业务系统不同时期系统之间数据模型不一致；业务系统不同时期业务过程有变化；旧系统模块在运营、人事、财务、办公系统等相关信息的不一致；遗留系统和新业务、管理系统数据集成不完备带来的不一致性。</p>
+
+<p>实现ETL，首先要实现ETL转换的过程。它可以集中地体现为以下几个方面：</p>
+
+<p>空值处理 可捕获字段空值，进行加载或替换为其他含义数据，并可根据字段空值实现分流加载到不同目标库。</p>
+
+<p>规范化数据格式 可实现字段格式约束定义，对于数据源中时间、数值、字符等数据，可自定义加载格式。</p>
+
+<p>拆分数据 依据业务需求对字段可进行分解。例，主叫号 861082585313-8148，可进行区域码和电话号码分解。</p>
+
+<p>验证数据正确性 可利用Lookup及拆分功能进行数据验证。例如，主叫号861082585313-8148，进行区域码和电话号码分解后，可利用Lookup返回主叫网关或交换机记载的主叫地区，进行数据验证。</p>
+
+<p>数据替换 对于因业务因素，可实现无效数据、缺失数据的替换。</p>
+
+<p>Lookup 查获丢失数据 Lookup实现子查询，并返回用其他手段获取的缺失字段，保证字段完整性。</p>
+
+<p>建立ETL过程的主外键约束 对无依赖性的非法数据，可替换或导出到错误数据文件中，保证主键唯一记录的加载。</p>
+
+
+  </section>
+</article>
+
+
+<hr><br/><br/>
+
+
+<!--  css & js -->
+<link rel="stylesheet" href="/share-dist/css/share.min.css">
+<script src="/share-dist/js/social-share.min.js"></script>
+<div class="share-component" data-mobile-sites="weibo,qq,qzone,tencent">
+</div>
+
+<br>
+
+
+
+<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+    <title>打赏</title>
+    <style type="text/css">
+        .content{width:80%;margin:10px auto;}
+                .hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+        .shang_box{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+        .shang_box img{border:none;border-width:0;}
+        .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+        .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+        .shang_close{float:right;display:inline-block;}
+                .shang_logo{display:block;text-align:center;margin:20px auto;}
+        .shang_tit{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('http://nineying.cn/log_yuan.png');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+        .shang_tit p{color:#a3a3a3;text-align:center;font-size:16px;}
+        .shang_payimg{width:140px;padding:10px;border:6px solid #EA5F00;margin:0 auto;border-radius:3px;height:140px;}
+        .shang_payimg img{display:block;text-align:center;width:140px;height:140px; }
+        .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+        .radiobox{width: 16px;height: 16px;background: url('http://nineying.cn/log_yuan.png');display: block;float: left;margin-top: 5px;margin-right: 14px;}
+        .checked .radiobox{background:url('http://nineying.cn/log_yuan.png');}
+        .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:280px;}
+        .shang_payselect .pay_item{display:inline-block;margin-right:10px;float:left;}
+        .shang_info{clear:both;}
+		.shang_info p,.shang_info a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏</a></p>
+    <div class="hide_box"></div>
+    <div class="shang_box">
+    	<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://nineying.cn/log_yuan.png" alt="取消" /></a>
+        <img class="shang_logo" src="http://nineying.cn/IMG_0007.gif" alt="小斯基" />
+    	<div class="shang_tit">
+    		<p>感谢您的支持，我会继续努力的!</p>
+    	</div>
+    	<div class="shang_payimg">
+    		<img src="http://nineying.cn/WechatIMGpay.png" alt="扫码支持" title="扫一扫" />
+    	</div>
+    		<div class="pay_explain">扫码打赏，你说多少就多少</div>
+    	<div class="shang_payselect">
+    		<div class="pay_item checked" data-id="alipay">
+	    		<span class="radiobox"></span>
+	    		<span class="pay_logo"><img src="http://nineying.cn/myAiliPay.jpeg" alt="支付宝" /></span>
+    		</div>
+    		<div class="pay_item" data-id="weipay">
+	    		<span class="radiobox"></span>
+	    		<span class="pay_logo"><img src="http://nineying.cn/WechatIMGpay.png" alt="微信" /></span>
+    		</div>
+    	</div>
+    	<div class="shang_info">
+    		<p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+    		<p>Powered by <a href="l.bbel.ink" target="_blank" title="小斯基">小斯基</a>，分享从这里开始，精彩与您同在</p>
+    	</div>
+    </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+    	$(".pay_item").click(function(){
+    		$(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+    		var dataid=$(this).attr('data-id');
+    		$(".shang_payimg img").attr("src","/dsimg/"+dataid+"img.jpg");
+    		$("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+    	});
+    });
+    function dashangToggle(){
+    	$(".hide_box").fadeToggle();
+    	$(".shang_box").fadeToggle();
+    }
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>R</title>
+<link  href="/dsimg/myreward.css" rel="stylesheet"  type="text/css">
+</head>
+
+
+		
+		<body >
+			<div id="ad">
+				<img style="width: 60%;" src=""/>
+			</div>
+		<a rel="vultr" href="https://www.vultr.com/?ref=7499751" >
+			<p style="padding: 0px;
+			margin: 0px;
+			width: 27%;">  便宜免备案云主机</p>
+			<img alt="vultr 便宜免备案云主机" style="border-width:0" src="http://qiniu.nineying.cn/VULRT.png" />
+			<!-- https://www.vultr.com/?ref=7499751 -->
+		  </p>
+		</a>
+		  <!-- <img id="ad" src="http://nineying.cn/Ailiredpackge.png"/> -->
+
+<div class="reward" >
+	<div class="reward-button">赏<span class="reward-code">
+		<span class="alipay-code"> <img class="alipay-img wdp-appear" src="http://qiniu.nineying.cn/myAiliPay.jpeg"/>
+			<b style="color: #135580;">支付宝打赏</b>
+		 </span> 
+		<span class="wechat-code"> <img class="wechat-img wdp-appear" src="http://qiniu.nineying.cn/WechatIMGpay.png"/>
+			<b style="color: #087923;">微信打赏</b>
+		</span>
+		<span class="wechat-code"> <img class="wechat-img wdp-appear" src="http://qiniu.nineying.cn/RedPackge.png"/><b style="color: red;">扫码领红包</b> </span>
+	</div>
+	<p class="reward-notice">如果文章对你有帮助，欢迎点击上方按钮打赏作者 <a href="http://tc.bbel.ink/">精准扶贫</a></p>
+</div>
+</body>
+</html>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/01/CentOS-7.2-%E9%85%8D%E7%BD%AEApache%E6%9C%8D%E5%8A%A1-httpd/" data-toggle="tooltip" data-placement="top" title="CentOS 7.2 配置Apache服务（httpd）">上一篇：  <span>CentOS 7.2 配置Apache服务（httpd）</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2019/02/%E6%96%B0%E5%B9%B4/" data-toggle="tooltip" data-placement="top" title="新年">下一篇：  <span>新年</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+<p></p>
+
+</br></br></br></br>
+
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Valine - A simple comment system based on Leancloud.</title>
+    <!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库:-->
+    <script src="/Valine-1.1.8/dist/Valine.min.js"></script>
+</head>
+
+    
+   <div class="comment"></div>
+    
+    <script>
+        new Valine({
+            // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+            av: AV, 
+            el: '.comment', // 
+            app_id: 'qcPGF7eIfohKVdigcUKAVnFA-gzGzoHsz', // 这里填写上面得到的APP ID
+            app_key: 'vad3Mfhrr0Weg2KzI4swJFPT', // 这里填写上面得到的APP KEY
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!!!', // [v1.0.7 new]留言框占位提示文字
+            avatar:'wavatar',
+            path:window.location.pathname,
+            guest_info:['nick','mail','link'] ,
+            pageSize:10,
+        });
+    </script>
+<div id="plus"></div>
+<script src="https://qingqing.com/static/js/plus.js"></script>
+<link href="../css/top.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.js?v=1.83.min" type="text/javascript"></script>
+<script src="../js/top.js"></script>
+<div style="display: none;" id="rocket-to-top">
+<div style="opacity:0;display: block;" class="level-2"></div>
+<div class="level-3"></div>
+</div>
+
+
+
+
+            
+    <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/13036698250" title="@13036698250 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/liuping-github" title="@liuping-github 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:liuping0822@outlook.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+        </div>
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 追梦抓梦 2017-2018 Theme by <a href="https://l.bbel.ink">小斯基</a>|
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=liuping-github&repo=liuping-github.github.io&type=star&count=false" >
+            </iframe>|
+<!-- cc -->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/cn/">
+  <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/cn/80x15.png" /></a>
+</p>   
+    	
+
+<!-- 访问统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+        </div>
+    
+
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+<!--博客鼠标点击显示文字JS特效代码 -->
+
+<script type="text/javascript">
+
+var a_idx = 0;
+jQuery(document).ready(function($) {
+ $("body").click(function(e) {
+ var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+ var $i = $("<span/>").text(a[a_idx]);
+ a_idx = (a_idx + 1) % a.length;
+ var x = e.pageX,
+ y = e.pageY;
+ $i.css({
+ "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+ "top": y - 10,
+ "left": x,
+ "position": "absolute",
+ "font-weight": "bold",
+ "color": "#ff6651"
+ });
+ $("body").append($i);
+ $i.animate({
+ "top": y - 180,
+ "opacity": 0
+ },
+ 1500,
+ function() {
+ $i.remove();
+ });
+ });
+});
+</script>
+
+</body>
+
+</html>

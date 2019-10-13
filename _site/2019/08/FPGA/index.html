@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <title>FPGA</title>
+  <meta name="description" content="你发现了个神奇的网站~">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="追梦抓梦的blog">
+  <meta itemprop="description" content="你发现了个神奇的网站~">
+  <meta itemprop="image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://l.bbel.ink">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="追梦抓梦的blog">
+  <meta property="og:description" content="你发现了个神奇的网站~">
+  <meta property="og:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="追梦抓梦的blog">
+  <meta name="twitter:description" content="你发现了个神奇的网站~">
+  <meta name="twitter:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <meta name="description" content="哎哟你发现了个神奇的网站~">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="追梦抓梦">
+  <meta itemprop="description" content="哎哟你发现了个神奇的网站~">
+  <meta itemprop="image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://l.bbel.ink">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="追梦抓梦">
+  <meta property="og:description" content="哎哟你发现了个神奇的网站~">
+  <meta property="og:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="追梦抓梦">
+  <meta name="twitter:description" content="哎哟你发现了个神奇的网站~">
+  <meta name="twitter:image" content="http://qiniu.nineying.cn/IMG_0007.gif">
+
+
+  <!-- Meta Tags Generated via http://heymeta.com -->
+
+  <meta name="description" content="对照表">
+  <meta name="author" content="robotkang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FPGA">
+  <meta name="twitter:description" content="对照表">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="FPGA">
+  <meta property="og:description" content="对照表">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://bbel.ink/2019/08/FPGA/">
+  <link rel="alternate" type="application/rss+xml" title="追梦抓梦" href="https://bbel.ink/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=2854006074878156134' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?add624666edd5826791ede28584a5f81";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'GTM-WQCZ8XP', '');
+      ga('send', 'pageview');
+  </script>
+  
+
+<!-- Valine Comment -->
+    
+</head>
+
+  <body style="height:1000px;">
+   <meta name="baidu-site-verification" content="0L5MKMrHOb" />
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  
+                博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+                  <a href="/liuyan" title="liuyan" class="btn-mobile-menu__icon">
+                      留言
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+<!--<style type="text/css">-->
+<!--body {background-image:url(http://pjz6rekh4.bkt.clouddn.com/fullsizeoutput_80.jpeg)}-->
+<!--p.flower {background-image: url(http://pjz6rekh4.bkt.clouddn.com/fullsizeoutput_80.jpeg); padding: 20px;}-->
+<!--</style>-->
+  
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 追梦抓梦 的主页" class="blog-button">
+                <div class="img"><img src=http://qiniu.nineying.cn/IMG_0007.gif alt="gif"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h1> 
+                            
+                                追梦抓梦
+                            
+                        </h1>
+                        <p>
+                           
+                                Never give up!  你的每一项专长都能为幸福铺路。
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 追梦抓梦" class="blog-button">追梦抓梦</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">男人炫耀的资本不是你现在有多少钱，有多大的权利。而是你经历了什么，越过了多大的坎，跳过了多深的坑照样一身傲气，最后完成了自己的梦想成家立业 。到那时你即使身无分文，出门人家也瞧得起你。人家可能会说，那个男孩当年是个搬砖的，现在一步一步爬成了一个大老板。而你开着保时捷跑在马路上横冲直撞，人家只会说这孩子当初穷的时候不坚持梦想，把自己的礼节、知识全搞丢了，走了错路。虽然有了钱，但也一无所有。</span>
+        
+        <hr class="panel-cover__divider" style="height:1px;border:none;border-top:1px solid #555555;"/>
+        <p class="panel-cover__description"></p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" style="height:1px;border:none;border-top:1px solid #555555;"/>
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/liuyan" title="liuyan">留言</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-disabled"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- latex公式支持代码 end -->
+
+<!-- 代码高亮设置 begin  代码高亮设置 end -->
+<link rel="stylesheet" href="/css/pygments-default.css">
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">FPGA</h1>
+    <div class="post-meta" style="color:#C3C3C3;border-bottom-width: 1px;border-bottom-style: dashed;padding-bottom: 0px;padding-top: 5px;">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-08-06 08:30:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-08-06</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span></span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="section">对照表</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">简称</th>
+      <th style="text-align: center">全称</th>
+      <th style="text-align: center">中文</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">SSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">小规模集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">中规模集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">VLSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">超大规模集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">巨大规模集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ASIC</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">微处理器&amp;专用集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">通用全硬件LSI电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PLD</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">可编程逻辑器件</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MSI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">IC</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">EDA</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">软件仿真工具</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">简单低密度PLD器件</td>
+      <td style="text-align: center">———-</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PROM</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">可编程只读存储器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">EPROM</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">紫外线可擦除只读存储器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">E²PROM</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">电可擦除只读存储器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PAL</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">可编程阵列逻辑</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GAL</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">通用阵列逻辑</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">复杂高密度PLD器件</td>
+      <td style="text-align: center">———-</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FPGA</td>
+      <td style="text-align: center">File Programmable Gate Array</td>
+      <td style="text-align: center">现场可编程门阵列（硬件仿真）</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CPLD</td>
+      <td style="text-align: center">Complex Programmable Logic Device</td>
+      <td style="text-align: center">复杂可编程逻辑器件（硬件仿真）</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RTL</td>
+      <td style="text-align: center">Register Transformation Level</td>
+      <td style="text-align: center">寄存器传输级</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CFI</td>
+      <td style="text-align: center">CAD Framework International</td>
+      <td style="text-align: center">国际计算机辅助设计框架结构组织</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">IP Core</td>
+      <td style="text-align: center">Intellectual Property Core</td>
+      <td style="text-align: center">致使产权芯核</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CPU</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">中央处理器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DSP</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">数字信号处理器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PCI</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">外设接口</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">EDO</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">电子系统最优化</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">IRL</td>
+      <td style="text-align: center">Internet Reconfigurable Logic</td>
+      <td style="text-align: center">互联网可重构逻辑</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SOC</td>
+      <td style="text-align: center">System on a Chip</td>
+      <td style="text-align: center">片上系统</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SOPC</td>
+      <td style="text-align: center">System on a Programmable Chip</td>
+      <td style="text-align: center">片上可编程系统</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">IC</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">集成电路</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">IS</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">集成系统</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>       为了避免设计的风险，在开发新的系统时常常采用FPGA/CPLD进行初步设计以验证系统设计的正确性，这已成为一种标准的方法。在设计过程中，往往先利用EDA工具完成软件仿真，再利用可编程ASIC器件FPGA/CPLD进行硬件仿真，在可编程ASIC器件实现设计后，通过版图设计、芯片测试、制版和流片转成ASIC电路。</p>
+</blockquote>
+
+<h3 id="section-1">软件硬化，硬件软化</h3>
+
+<blockquote>
+  <p>       软件硬化是指所有的软件设计最后转化成硬件来实现，用软件方式设计的系统到硬件系统的转换是由EDA开发软件自动完成的； <br />
+       硬件软化是指硬件的设计是用软件的设计方式进行，尽管目标系统是硬件，但整个设计和修改过程如同完成软件设计一样方便和高效。</p>
+</blockquote>
+
+<h3 id="top-down">自顶向下(top-down)的设计方法</h3>
+
+<blockquote>
+  <p>       传统的设计方法都是自底向上的，即首先确定可用的元器件，然后根据这些器件进行逻辑设计，完成各模块后进行连接，并形成系统，最后经调试、测量看整个系统是否达到规定的性能指标。  <br />
+        基于EDA技术的所谓“自顶向下”的设计方法正好相反，它主要采用并行工程和“自顶向下”的设计方法，使开发者从一开始就要考虑到产品生成周期的诸多方面，包括质量、成本、开发时间及用户的需求等。该设计方法首先从系统设计入手，在顶层进行功能划分和结构设计，由于采用高级语言描述，因此能在系统级采用仿真手段验证设计的正确性，然后再逐级设计底层的结构，用VHDL、Verilog HDL 等硬件描述语言对高层次的系统进行电路描述，最后再用逻辑综合优化工具生成具体的门级逻辑电路的网表，其对应的物理实现级可以是印刷电路板或专用集成电路。“自定向下”设计方法的特点表现在以下几个方面： <br />
+        （1）基于可编程逻辑器件PLD和EDA开发工具支撑 <br />
+        （2）采用系统级、电路级和门级的逐级仿真技术，以便及早发现问题，进而修改设计方案。 <br />
+        （3）现代电子应用正向模块化发展，或者说向软、硬组合的方向发展。对于以往的设计成果稍作修改、组合就能投入再利用，从而产生全新或派生的设计模块 <br />
+        （4）由于采用的是结构化开发手段，所以可实现多人多任务的并行工作方式，使复杂系统的设计规模和效率大幅度提高。 <br />
+        （5）再选择器件的类型、规模、硬件结构等方面具有更大的自由度。
+### 集设计、仿真和测试于一体
+       现代的EDA软件平台集设计、仿测试于一体，配备了系统设计自动化的全部工具，这些工具包括：多种能兼容和混合使用的逻辑描述输入工具以及高性能的逻辑综合、优化和仿真测试工具。电子设计师可以从概念、算法、协议等开始设计电子系统，将电子产品从电路、性能分析到设计出IC版图或PCB版图的整个过程在计算机上自动完成。 <br />
+       EDA 仿真测试技术极大地提高了大规模系统电子设计的自动化程度。在设计的各个阶段都能方便地进行仿真和测试。设计的输入、输出或中间变量之间的信号关系由计算机根据要求提供的设计方案，从各种不同层次的系统性能出发完成一系列准确额逻辑和时序仿真验证。该测试技术通过计算机就能对系统上的目标器件进行边界扫描测试。目前大部分FPGA/CPLD芯片都支持边界扫描技术。边界扫描测试技术标准是由IEEE（电气工程师学会）组织联合测试行动组（JTAG）在20世纪80年代提出的，用来解决高密度引线器件和高密度电路板上的元器件的测试问题。它只需要四根信号线就能够对电路板上所有支持边界扫描的芯片内部逻辑和边界管脚进行测试。</p>
+</blockquote>
+
+<h3 id="section-2">在系统可现场编程，在线升级</h3>
+<blockquote>
+  <p>        编程是指把系统设计的程序化数据按一定的格式转入一个或多个可编程逻辑器件的编程存储单元，定义内部模块的逻辑功能以及它们的相互连接关系。早期的可编程逻辑器件需要将芯片从印制板上拆下，然后把它插在专用的编程器上进行编程，目前广泛采用的在系统可编程技术则克服了这一缺点。 <br />
+        在系统可编程是指可编程逻辑器件不需要使用编程器，具有将器件插在系统内或电路板上仍然可以对其进行编程和再编程的能力。目前的FPGA/CPLD器件为设计者提供了系统内可再编程或可再配置能力，使得系统内硬件的功能可以像软件一样易于修改，这就为设计者进行电子系统设计和开发提供了可实现的最新手段。采用这种技术对系统的设计、制造、测试和维护也产生了重大的影响，给样机设计、电路板调试、系统制造和系统升级带来革命性的变化。
+### 设计工作标准化，模块可移植共享
+       设计语言、EDA的底层技术及其接口的标准化能很好地对设计结果进行交换、共享及重用。数据格式的一致性通过标准来保证。EDA的底层技术、EDA软件之间的接口等采用标准数据格式，这样管理局特色的EDA工具都能被集成在易于管理的统一环境之下，并支持任务之间、项目之间、设计工程师之间的信息传输和工程数据共享，从而使EDA框架日趋标准化并进行设计工作和“自顶向下”设计方法也是构建电子系统集成设计环境或集成设计平台的基本规范。</p>
+</blockquote>
+
+<h3 id="eda">传统设计方法和EDA设计方法的主要区别</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">传统设计方法</th>
+      <th style="text-align: center">EDA设计方法</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">自底向上</td>
+      <td style="text-align: center">自顶向下</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">手动设计</td>
+      <td style="text-align: center">自动设计</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">硬、软件分离</td>
+      <td style="text-align: center">打破硬、软件屏障</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">原理图方式设计</td>
+      <td style="text-align: center">原理图、VHDL语言等多种设计方式</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">系统功能固定</td>
+      <td style="text-align: center">系统功能了易变</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">不易仿真</td>
+      <td style="text-align: center">易仿真</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">难测试修改</td>
+      <td style="text-align: center">易测试修改</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">模块难移植共享</td>
+      <td style="text-align: center">设计工作标准化，模块可移植共享</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">设计周期长</td>
+      <td style="text-align: center">设计周期短</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="section-3">现代数字系统的设计流程</h3>
+<blockquote>
+  <p>       现代数字系统的设计流程是指利用EDA软件和编程工具对可编程逻辑器件进行开发的过程。在EDA软件平台上，利用硬件描述语言HDL等逻辑描述手段完成设计，然后结合多层次的仿真技术，在确保设计的可行性与正确性的前提下完成功能确认，接着日用EDA工具的逻辑综合功能，把功能描述转换成某一具体目标芯片的网表文件，输出给该器件厂商的布局布线适配器，进行逻辑化简及优化、逻辑映射及布局布线，再利用产生的仿真文件进行功能和时序等方面的验证，以确保实际系统的性能，最后，进行针对特定目标芯片的逻辑映射和编程下载等工作。整个过程包括 <br />
+- 设计准备
+- 设计输入
+- 设计处理
+- 器件编程
+四个步骤以及相应的功能仿真、时序仿真和器件测试三个设计校验过程。</p>
+</blockquote>
+
+<ul>
+  <li>现代数字系统的设计流程</li>
+</ul>
+
+<p><code class="highlighter-rouge">
+设计准备   
+    |   
+    |   
+设计输入 ————&gt; 功能仿真   
+    |   &lt;————   
+    |   
+    |   
+设计处理 ————&gt; 时序仿真   
+    |   &lt;————   
+    |     
+    |    
+器件编程 ————&gt; 器件测试   
+        &lt;————   
+</code></p>
+
+<h3 id="section-4">设计准备</h3>
+<blockquote>
+  <p>       在设计之前，首先要进行方案论证、系统设计和器件选择等设计准备工作。设计者首先根据任务要求，判明系统指标的可行性。系统的可行性要受到逻辑合理性、成本、开发条件、器件供应、设计员水平等方面的约束。若系统可行，则根据系统所完成的功能及复杂程度，对器件本身的资源和成本、工作速度及连线的可布性等方面进行权衡，选择合适的设计方案和合适的器件类型。
+### 设计输入
+       设计输入是设计者将所设计的系统或电路以EDA开发软件要求的某种形式表示出来，并送入计算机的过程。他根据EDA开发系统提供的一个电路逻辑的输入环境（如原理图、硬件描述语言HDL等形式）进行输入，这些方法可以单独构成，也可将多种手段组合来生成一个完整的设计。 <br />
+       输入软件在设计输入时，还会检查语法错误，并产生网表文件，供设计处理和设计校验使用。
+### 设计处理
+       设计处理是从设计输入文件到生成编程数据文件的编译过程，这是器件设计中的核心环节。设计处理是由编译软件自动完成的。设计处理的过程如下。 <br />
+       （1）逻辑优化和综合。由软件化简逻辑，并把逻辑描述转变为最适合在器件中实现的形式。综合的目的是将多个模块化设计文件并为一个网表文件，并使层次设计平面化。逻辑综合应施加合理的用户约束，以满足设计的要求。
+       （2）映射。把设计分为多个适用具体PLD器件内部逻辑资源实现的逻辑小块的形式。映射工作可以全部自动实现，也可以部分由用户控制，还可以全部由用户控制进行。 <br />
+       （3）布局和布线。布局和布线工作是在设计检验通过以后由软件自动完成的，它能以最优的方式对逻辑元件进行布局，并准确地实现PLD器件内部逻辑元器件的互连。 <br />
+       （4）生成编程数据文件。设计处理的最后一步是产生可供器件编程使用的数据文件。对CPLD器件而言，产生熔丝图文件即JDEC文件，对FPGA器件则生成位流数据文件。
+### 数据校验
+       设计校验过程是使用EDA开发软件对设计进行分析，它包括功能仿真、时序仿真和器件测试。 <br />
+        功能仿真用于验证设计的逻辑功能，通常是在设计输入完成之后，选择具体器件进行编译之前进行的逻辑功能验证。功能仿真没有延时信息，对于初步的逻辑功能检测非常方便。仿真结果将会生成报告文件和信号波形输出，从中便可以观察到各个节点的信号变化。若发现错误，则可返回设计输入中修改逻辑设计。 <br />
+       时序仿真是在选择了具体器件并完成布局、布线之后进行的快速时序检验，可对设计性能作整体上的分析，这也是与实际器件工作情况基本相同的仿真。由于不同器件的内部延时不一样，不同的布布线方案也给延时造成不同的影响，用户可以得到某一条或某一类路径的时延信息，时序仿真也可以给出所有路径的延时信息（又称延时仿真）。若设计的性能不能达到要求，需找出影响性能的关键路径，并返回延时信息，修改约束文件，对设计进行重新综合和布局布线，如此重复多次知道满足设计要求为止。因此时序仿真对于分析时序关系，评估设计的性能以及检查和消除竞争冒险等是非常有必要的。  <br />
+       直接进行功能仿真合理有点是设计耗时短，对硬件库和综合器没有任何要求，尤其对于规模比较大的的设计项目，综合布局布线在计算机运行耗时可观，若每次修改都进行时序仿真，显然会降低设计开发效率。通常的做法是：首先进行功能仿真，待确认设计文件满足设计要求的逻辑功能后再进行综合、布局布线和时序仿真，把握设计项目在实际器件的工作情况。
+### 器件编程
+       编程是吧系统设计的下载或配置文件，通过编程电缆按一定的格式装入一个或多个PLD的编程存储单元，用于定义PLD内部模块的逻辑功能以及它们的相互连接关系，以便进行硬件调试和器件测试。 <br />
+       器件编程需要满足一定的条件，如编程电压、编程时序和编程算法等。随着PLD集成度不断提高，PLD的编程日益复杂，PLD的编程必须在开发系统的支持下才能完成。 <br />
+        器件编程在完毕后，对于具有边界扫描测试能力和在系统编程能力的器件来说，系统测试起来就更加方便，他可通过下载电缆下载测试数据来探测芯片的内部逻辑以诊断设计，并能随时修改设计重新编程。
+### EDA软件工具简介
+* EDA 软件工具分为如下5个模块</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">模块</th>
+      <th style="text-align: center">简介</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">模块一</td>
+      <td style="text-align: center">设计输入编辑器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">模块二</td>
+      <td style="text-align: center">HDL综合器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">模块三</td>
+      <td style="text-align: center">仿真器</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">模块四</td>
+      <td style="text-align: center">适配器（或称布局、布线器）</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">模块五</td>
+      <td style="text-align: center">下载器（或称编程器）</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>现在也有将五个模块集成在一起的EDA开发软件,如Xilinx公司的ISE、Altera公司的Quartus II软件。
+### 设计输入编辑器
+       优秀的EDA软件平台不仅集成了多种输入编辑器的设计输入表达式，如状态图输入方式、波形输入方式以及HDL的文本输入方式，而且还提供了不同的设计平台之间的信息交流接口和一定数量的功能模块库供设计人员直接选用。设计者可以根据功能模块的具体情况灵活选用。
+- 原理图输入
+       原理图输入时EDA工具软件提供的最基本的设计方法。该方法是选用EDA软件提供的器件库资源，并利用电路作图的方法，进行相关的电气连接而构成相应的系统或满足某些特定功能的系统或新元件。这种方式大多在对系统及各部分电路很熟悉的情况，或在系统对时间特性要求较高的场合，它的主要优点是容易实现仿真，便于信号的观察和电路的调整。原理图设计方法直观、易学。但当系统功能较复杂时，原理图输入方式效率低，他适合应于不太复杂的小系统和复杂系统的综合设计（与其他设计方法进行联合设计）。
+- 程序设计法
+       程序设计法是指使用硬件描述语言HDL进行电路设计，使用HDL语言描述硬件电路是解决复杂电路描述的重要手段，大规模和超大规模集成电路均要使用HDL进行设计，硬件描述语言种类较多，使用较多的主要有ABEL、VHDL和Verilog HDL。由于VHDL和Verilog HDL 被国际IEEE组织认定为工业标准硬件描述语言，目前这两种语言在电子设计领域得到了广泛的应用。 <br />
+- 状态机
+       一些EDA设计输入工具提供状态机图形设计描述方法。用户可用可视化图形（状态图）来描述状态机，可以绘画似的创建一定功能的状态机，最后生成HDL文本输入，如Mentor公司的FPGA advantage(含 HDL designer series)、Active HDL 中的Active State 等。尤其是HDL designer series 中的各种输入编辑器，可以接受诸如原理图、状态图、表格图等输入形式。  <br />
+- IP模块使用
+       使用具有知识产权的IP模块是现代数字系统设计中最有效的方法之一。IP模块也称为IP Core (Intellectual Property Core)，即致使产权芯核。 <br />
+       IP模块或IP Core 一般是比较复杂的模块，如中央处理器（CPU）、数字信号处理器（DSP）、外设接口（PCI）等，这类模块设计工作量大，设计者要在设计、仿真、优化、逻辑综合、测试等方面花费大量劳动。供应商在提供IP模块时，已经排除了语言描述的冗余性，并且经过了验证，所以系统设计者采用IP模块进行设计时，可以集中精力去解决系统中的重点课题，并可以将优化合理IP模块合并到其核心电路中来进行逻辑合成。另外，除了EDA软件工具提供大量IP Core以外，网络上也有丰富的各类IP Core 出售，甚至提供成套解决方案，使设计者之间资源共享，从而缩短了产品设计周期，降低了产品设计风险。 <br />
+       在设计输入过程中，往往分模块、分层次地进行设计描述。描述器件总功能的模块放置在最上层，称为顶层设计；描述器件最基本功能的模块放置在最下层，称为底层设计。层次化设计方法比较自由，可以在任何层次使用电路图或HDL进行描述。由于电路图的特点是适合描述连接关系和接口关系，而描述逻辑功能则很繁琐；HDL语言正好相反，逻辑描述能力强，但不适合描述链接和接口关系。一般常见的做法是：在顶层设计中，使用电路图描述模块连接关系和芯片内部逻辑到管脚的接口；在底层设计中，使用HDL硬件描述语言描述模块的逻辑功能。 <br />
+       现代EDA软件为设计者提供了多种有效的设计入口，但是各种设计方法都有其自身的优势和局限。合理选择和综合应用各种设计方法尤其是IP Core 和网上资源常常会使设计工作事半功倍。
+### HDL综合器
+       逻辑综合就是使用EDA综合工具，将HDL语言描述的寄存器传输级电路转化成门级网表的过程。逻辑综合是一个中间过程，它生成的网表是由用导线相互连接的寄存器传输级功能块组成的，HDL综合器则是用于逻辑综合工具。在把可综合的VHDL/Verilog HDL转化成硬件电路时，包含了三个过程： <br />
+（1）转化：综合工具读入电路系统的HDL描述，将其转化为各个功能单元连接的电路结构的门级网表。这是一个通用电路原理图形成的过程，不考虑实际器件的实现。 <br />
+（2）优化：根据设计者所施加的时序、面积等约束条件，针对实际实现的目标器件的结构转化的门级网表按一定的算法进行逻辑重组和优化，并使之满足各种约束条件。 <br />
+（3）映射：根据面积和时序的约束条件，综合工具从目标器件的工艺库中搜索恰当的单元来构成电路。  <br />
+HDL综合器由寄存器传输级（RTL）代码、调用模块的接口及用户设置的综合目标和约束条件共同参与完成。其中，调用模块的接口导入是由于RTL代码调用了一些外部模块，而这些外部模块不能被综合或无需综合，但逻辑综合器需要其接口的定义来检查逻辑并保留这些模块的接口。HDL综合器的输入文件一般是网表文件，如文件后缀.edf的EDIF格式文件，或是直接调用VHDL/Verilog HDL表达的标准格式网表文件，或对应FPGA器件厂商的网表文件。如Xilinx公司的XNF网表文件。</p>
+</blockquote>
+
+<ul>
+  <li>综合工具</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">厂商名称</th>
+      <th style="text-align: center">综合器名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Xilinx</td>
+      <td style="text-align: center">XST</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Synopsys</td>
+      <td style="text-align: center">FPGA Compiler II</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Synopsys</td>
+      <td style="text-align: center">FPGA express</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Synplicity</td>
+      <td style="text-align: center">Synplify</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Mentor Graphics</td>
+      <td style="text-align: center">Leonardo spectrum</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>       HDL综合器完成EDA设计流程中的一个独立设计步骤，它的调用方式一般有两种：一种是前台模式，在被调用时显示最常见的窗口界面；一种称为后台模式或控制台模式，在被调用时不出现图形界面，仅在后台运行。
+### 仿真器
+       仿真器有基于元件（逻辑门）的仿真器和HDL仿真器。基于元件的仿真器缺乏HDL仿真器的灵活性和通用性。
+在EDA设计中，仿真的地位十分重要。行为模型的表达、电子系统的建模、逻辑电路的验证乃至门级系统的测试，每一步都离不开仿真器的模拟检测，各设计环节的仿真仍然是整个EDA工程中最耗时间的一个步骤，因此HDL仿真器的仿真速度、仿真的准确性和易用性成为衡量仿真器的重要指标。 <br />
+       HDL仿真器按对设计语言不同的处理方式分类，可以分为编译型和解释型仿真器。编译型仿真器的仿真速度较快，但需要预处理，因此不便即使修改仿真环境和条件；解释型仿真的速度一般，可以随时修改仿真环境和条件。  <br />
+       按照处理的硬件描述语言类型不同，HDL仿真器可分为VHDL仿真器、Verilog仿真器、Mixed HDL仿真器（同时处理Verilog HDL 与 VHDL）和其他HDL仿真器。 <br />
+       按照仿真时是否考虑硬件延时分类，HDL仿真器可分为功能仿真器和时序仿真器。根据输入和仿真文件的不同，可以由不同的仿真器完成，也可以由同一个仿真器完成。
+- 功能仿真</p>
+</blockquote>
+
+<blockquote>
+  <p>       功能仿真是直接对HDL语言、原理图描述或其他描述形式描述的逻辑功能进行测试模拟，以了解其实现的功能是否满足原设计的要求。它是由设计输入的行为级或RTL级代码、测试数据参与的测试程序以及调用模块的行为仿真模型共同参与完成逻辑功能的验证。功能仿真没有延时信息，仿真过程不涉及任何具体器件的硬件特性，对于初步的逻辑功能检测非常方便。
+- 时序仿真 
+时序仿真是在选择了具体器件后，由适配器完成布局、布线并得到HDL网表和标准延时文件，以及FPGA基本单元仿真模型和测试程序，它们共同参与时序仿真。时序仿真包含了器件的硬件特性参数和内部连线时延的仿真，是接近真实器件运行特性仿真，因而仿真精度高。</p>
+</blockquote>
+
+<ul>
+  <li>按照仿真电路级别的不同，HDL仿真器可以单独或综合完成以下各仿真步骤：<br /></li>
+</ul>
+
+<p>(1) 系统级仿真<br />
+(2) 行为级仿真<br />
+(3) RTL级仿真<br />
+(4) 门级时序仿真<br /></p>
+
+<ul>
+  <li>常用的仿真器</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">厂商名称</th>
+      <th style="text-align: center">仿真器器名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Mentor Graphics</td>
+      <td style="text-align: center">Modelsim</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Aldec</td>
+      <td style="text-align: center">Active HDL</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Cadence</td>
+      <td style="text-align: center">NC-VHDL</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Cadence</td>
+      <td style="text-align: center">NC-Verilog</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Cadence</td>
+      <td style="text-align: center">Verilog-XL</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SYNOPSYS</td>
+      <td style="text-align: center">VCS</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SYNOPSYS</td>
+      <td style="text-align: center">VSS</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Xilinx</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Altera</td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="section-5">适配器（或称布局、布线器）</h3>
+<blockquote>
+  <p>       适配即结构综合，它的任务是完成目标系统在器件上的布局和布线，通常是由可编程逻辑器件生产厂商提供的专门针对器件开发的软件来完成。这些软件可以单独运行或嵌入到厂商提供的EDA集成开发软件中，如Altera公司的EDA集成开发环境Quartus II 和 Xilinx 公司的ISE软件都含有嵌入的适配器。<br />
+       适配器利用综合器产生的网表文件、模块的综合模型以及用户设置的约束条件共同完成适配过程，最后输出的是符合各厂商定义的下载文件，用于下载到FPGA/CPLD器件中以最终实现设计。另外，适配器可以输出多种用途的文件：用于精确的时序仿真的延时文件；面向第三方EDA工具的输出文件，如HDL网表文件；适配技术报告文件等。
+### 下载器（或称编程器）
+       下载是在功能仿真与时序仿真正确的前提下，将综合后形成的下载文件下载到具体的FPGA芯片中，实现硬件设计，也叫芯片的编程/配置。下载软件一般由可编程逻辑器件厂商提供，或嵌入到EDA开发软件中。</p>
+</blockquote>
+
+<h3 id="section-6">现代数字系统设计的发展趋势</h3>
+<ul>
+  <li>电子设计最优化（EDO）</li>
+  <li>在线可重构技术</li>
+  <li>IRL技术主要特点体现
+    <ul>
+      <li>（1）器件结构的支持</li>
+      <li>（2）JAVA语言的使用</li>
+    </ul>
+  </li>
+  <li>SOPC技术优势主要体现
+    <ul>
+      <li>（1）运用嵌入的微处理器软核和其他IP Core 资源。</li>
+      <li>（2）采用先进的EDA开发工具，如Xilinx公司的ISE以及EDK开发工具的出现，极大地提高了开发人员的工作效率。</li>
+      <li>（3）知识产权得到重视，越来越多的设计人员以IP Core设计及复用的方式对现在的IP Core加以充分利用，从而提高设计效率并缩短产品上市时间。</li>
+      <li>（4）通过SOPC技术，能够有机会融合MCU、DSP、和FPGA，兼顾他们各自的特点，这些特点顺应了未来嵌入式系统发展的趋势。</li>
+    </ul>
+  </li>
+</ul>
+
+  </section>
+</article>
+
+
+<hr><br/><br/>
+
+
+<!--  css & js -->
+<link rel="stylesheet" href="/share-dist/css/share.min.css">
+<script src="/share-dist/js/social-share.min.js"></script>
+<div class="share-component" data-mobile-sites="weibo,qq,qzone,tencent">
+</div>
+
+<br>
+
+
+
+<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+    <title>打赏</title>
+    <style type="text/css">
+        .content{width:80%;margin:10px auto;}
+                .hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+        .shang_box{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+        .shang_box img{border:none;border-width:0;}
+        .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+        .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+        .shang_close{float:right;display:inline-block;}
+                .shang_logo{display:block;text-align:center;margin:20px auto;}
+        .shang_tit{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('http://nineying.cn/log_yuan.png');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+        .shang_tit p{color:#a3a3a3;text-align:center;font-size:16px;}
+        .shang_payimg{width:140px;padding:10px;border:6px solid #EA5F00;margin:0 auto;border-radius:3px;height:140px;}
+        .shang_payimg img{display:block;text-align:center;width:140px;height:140px; }
+        .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+        .radiobox{width: 16px;height: 16px;background: url('http://nineying.cn/log_yuan.png');display: block;float: left;margin-top: 5px;margin-right: 14px;}
+        .checked .radiobox{background:url('http://nineying.cn/log_yuan.png');}
+        .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:280px;}
+        .shang_payselect .pay_item{display:inline-block;margin-right:10px;float:left;}
+        .shang_info{clear:both;}
+		.shang_info p,.shang_info a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏</a></p>
+    <div class="hide_box"></div>
+    <div class="shang_box">
+    	<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://nineying.cn/log_yuan.png" alt="取消" /></a>
+        <img class="shang_logo" src="http://nineying.cn/IMG_0007.gif" alt="小斯基" />
+    	<div class="shang_tit">
+    		<p>感谢您的支持，我会继续努力的!</p>
+    	</div>
+    	<div class="shang_payimg">
+    		<img src="http://nineying.cn/WechatIMGpay.png" alt="扫码支持" title="扫一扫" />
+    	</div>
+    		<div class="pay_explain">扫码打赏，你说多少就多少</div>
+    	<div class="shang_payselect">
+    		<div class="pay_item checked" data-id="alipay">
+	    		<span class="radiobox"></span>
+	    		<span class="pay_logo"><img src="http://nineying.cn/myAiliPay.jpeg" alt="支付宝" /></span>
+    		</div>
+    		<div class="pay_item" data-id="weipay">
+	    		<span class="radiobox"></span>
+	    		<span class="pay_logo"><img src="http://nineying.cn/WechatIMGpay.png" alt="微信" /></span>
+    		</div>
+    	</div>
+    	<div class="shang_info">
+    		<p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+    		<p>Powered by <a href="l.bbel.ink" target="_blank" title="小斯基">小斯基</a>，分享从这里开始，精彩与您同在</p>
+    	</div>
+    </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+    	$(".pay_item").click(function(){
+    		$(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+    		var dataid=$(this).attr('data-id');
+    		$(".shang_payimg img").attr("src","/dsimg/"+dataid+"img.jpg");
+    		$("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+    	});
+    });
+    function dashangToggle(){
+    	$(".hide_box").fadeToggle();
+    	$(".shang_box").fadeToggle();
+    }
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>R</title>
+<link  href="/dsimg/myreward.css" rel="stylesheet"  type="text/css">
+</head>
+
+
+		
+		<body >
+			<div id="ad">
+				<img style="width: 60%;" src=""/>
+			</div>
+		<a rel="vultr" href="https://www.vultr.com/?ref=7499751" >
+			<p style="padding: 0px;
+			margin: 0px;
+			width: 27%;">  便宜免备案云主机</p>
+			<img alt="vultr 便宜免备案云主机" style="border-width:0" src="http://qiniu.nineying.cn/VULRT.png" />
+			<!-- https://www.vultr.com/?ref=7499751 -->
+		  </p>
+		</a>
+		  <!-- <img id="ad" src="http://nineying.cn/Ailiredpackge.png"/> -->
+
+<div class="reward" >
+	<div class="reward-button">赏<span class="reward-code">
+		<span class="alipay-code"> <img class="alipay-img wdp-appear" src="http://qiniu.nineying.cn/myAiliPay.jpeg"/>
+			<b style="color: #135580;">支付宝打赏</b>
+		 </span> 
+		<span class="wechat-code"> <img class="wechat-img wdp-appear" src="http://qiniu.nineying.cn/WechatIMGpay.png"/>
+			<b style="color: #087923;">微信打赏</b>
+		</span>
+		<span class="wechat-code"> <img class="wechat-img wdp-appear" src="http://qiniu.nineying.cn/RedPackge.png"/><b style="color: red;">扫码领红包</b> </span>
+	</div>
+	<p class="reward-notice">如果文章对你有帮助，欢迎点击上方按钮打赏作者 <a href="http://tc.bbel.ink/">精准扶贫</a></p>
+</div>
+</body>
+</html>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/08/SQL/" data-toggle="tooltip" data-placement="top" title="SQL">上一篇：  <span>SQL</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</section>
+<p></p>
+
+</br></br></br></br>
+
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Valine - A simple comment system based on Leancloud.</title>
+    <!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库:-->
+    <script src="/Valine-1.1.8/dist/Valine.min.js"></script>
+</head>
+
+    
+   <div class="comment"></div>
+    
+    <script>
+        new Valine({
+            // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+            av: AV, 
+            el: '.comment', // 
+            app_id: 'qcPGF7eIfohKVdigcUKAVnFA-gzGzoHsz', // 这里填写上面得到的APP ID
+            app_key: 'vad3Mfhrr0Weg2KzI4swJFPT', // 这里填写上面得到的APP KEY
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!!!', // [v1.0.7 new]留言框占位提示文字
+            avatar:'wavatar',
+            path:window.location.pathname,
+            guest_info:['nick','mail','link'] ,
+            pageSize:10,
+        });
+    </script>
+<div id="plus"></div>
+<script src="https://qingqing.com/static/js/plus.js"></script>
+<link href="../css/top.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.js?v=1.83.min" type="text/javascript"></script>
+<script src="../js/top.js"></script>
+<div style="display: none;" id="rocket-to-top">
+<div style="opacity:0;display: block;" class="level-2"></div>
+<div class="level-3"></div>
+</div>
+
+
+
+
+            
+    <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/13036698250" title="@13036698250 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/liuping-github" title="@liuping-github 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:liuping0822@outlook.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+        </div>
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 追梦抓梦 2017-2018 Theme by <a href="https://l.bbel.ink">小斯基</a>|
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=liuping-github&repo=liuping-github.github.io&type=star&count=false" >
+            </iframe>|
+<!-- cc -->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/cn/">
+  <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/cn/80x15.png" /></a>
+</p>   
+    	
+
+<!-- 访问统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+        </div>
+    
+
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+<!--博客鼠标点击显示文字JS特效代码 -->
+
+<script type="text/javascript">
+
+var a_idx = 0;
+jQuery(document).ready(function($) {
+ $("body").click(function(e) {
+ var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+ var $i = $("<span/>").text(a[a_idx]);
+ a_idx = (a_idx + 1) % a.length;
+ var x = e.pageX,
+ y = e.pageY;
+ $i.css({
+ "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+ "top": y - 10,
+ "left": x,
+ "position": "absolute",
+ "font-weight": "bold",
+ "color": "#ff6651"
+ });
+ $("body").append($i);
+ $i.animate({
+ "top": y - 180,
+ "opacity": 0
+ },
+ 1500,
+ function() {
+ $i.remove();
+ });
+ });
+});
+</script>
+
+</body>
+
+</html>

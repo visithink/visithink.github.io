@@ -1,0 +1,89 @@
+# Basic
+title: 追梦抓梦
+subtitle:  男人炫耀的资本不是你现在有多少钱，有多大的权利。而是你经历了什么，越过了多大的坎，跳过了多深的坑照样一身傲气，最后完成了自己的梦想成家立业 。到那时你即使身无分文，出门人家也瞧得起你。人家可能会说，那个男孩当年是个搬砖的，现在一步一步爬成了一个大老板。而你开着保时捷跑在马路上横冲直撞，人家只会说这孩子当初穷的时候不坚持梦想，把自己的礼节、知识全搞丢了，走了错路。虽然有了钱，但也一无所有。    
+description: ~
+# 头像里面的标题
+avatarTitle: 追梦抓梦
+# 头像里面的描述
+avatarDesc: Never give up!  你的每一项专长都能为幸福铺路。
+url: "https://bbel.ink"
+
+# Comment 评论
+comment:
+    provider: duoshuo
+    duoshuo:
+     short_name: 追梦抓梦
+
+# Social 社交平台
+social:
+    weibo: 13036698250
+    weixing: 13036698250
+    github: liuping-github
+    # twitter: 
+    mail: liuping0822@outlook.com
+    csdn: qq_35401358
+    qq: 1062752411
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: add624666edd5826791ede28584a5f81
+
+# Google Analytics 分析
+# 使用博客模板请去掉或者更换 id
+ga:
+ id: GTM-WQCZ8XP
+# 插件添加
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+
+
+permalink: /:year/:month/:title/
+# Format
+
+highlighter: rouge
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+textColor: #FF0000
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+# 支持的颜色 蓝色，绿色，紫色，红色，橙色或板岩。如果您需要清除，请将其留空。
+
+cover_color: 
+
+# The blog button should not be removed. 不应删除博客按钮
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s 首页中的导航按钮
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}   
+    - {title: 留言, description: liuyan, url: '/liuyan'}
+#    - {title: 资源, description: ziyuan, url: '/ziyuan'}
+#    - {title: 关于我, description: about, url: '/about'}
+
+          
+    
+
+# Pagination 分页
+gems: [jekyll-paginate]
+paginate: 20
+paginate_path: "page/:num/"
+
+# 管理页面
+jekyll_admin:
+  hidden_links:
+  - posts
+  - pages
+  - staticfiles
+  - datafiles
+  - configuration
+
+#theme: jekyll-theme-midnight 雪花主题
+#theme: my-awesome-jekyll-theme #灯主题
+theme: jekyll-theme-cayman
