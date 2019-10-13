@@ -3,3 +3,5 @@
 .idea
 *.swp
 .Trashes
+_site
+*_site
