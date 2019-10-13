@@ -7,7 +7,7 @@ avatarTitle: 追梦抓梦
 # 头像里面的描述
 avatarDesc: Never give up!  你的每一项专长都能为幸福铺路。
 url: "https://bbel.ink"
-
+source: app
 # Comment 评论
 comment:
     provider: duoshuo
