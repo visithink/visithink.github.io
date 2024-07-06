@@ -1,17 +1,17 @@
 # Basic
 title: 可见可思-追梦抓梦
-subtitle:  <a href="https://beian.miit.gov.cn/">蜀ICP备2023024629号-1</a>     版权所有:四川可见可思信息科技
+subtitle:  <a href="https://beian.miit.gov.cn">蜀ICP备2023024629号-1</a>     版权所有:四川可见可思信息科技
 description: ~
 # 头像里面的标题
 avatarTitle: 可见可思-追梦抓梦
 # 头像里面的描述
 avatarDesc: Never give up!  你的每一项专长都能为幸福铺路。 
-url: "https://baituntech.cn"
+url: "https://www.bbel.ink/"
 # Comment 评论
 comment:
     provider: duoshuo
     duoshuo:
-     short_name: 追梦抓梦
+     short_name: 可见可思-追梦抓梦
 
 # Social 社交平台
 social:
